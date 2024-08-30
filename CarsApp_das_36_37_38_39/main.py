@@ -3,15 +3,25 @@ from validators.register_vals import val_date, val_login, val_password, val_phon
 
 
 def admin_func():
-    print("""
+    while True:
+        print("""
 1. add car
 2. update car
 3. delete car
-    """)
-    choose = input("-> : ")
-
-
-
+             """)
+        choose = input('-> : ')
+        if choose == '1':
+            print('add car')
+            break
+        elif choose == '2':
+            print('update car')
+            break
+        elif choose == '3':
+            print('delete car')
+            break
+        else:
+            print('no')
+            continue
 
 def login():
     login = input("greq dzer login")
