@@ -1,6 +1,18 @@
 from db.User import UserClass
 from validators.register_vals import val_date, val_login, val_password, val_phone
 
+
+def admin_func():
+    print("""
+1. add car
+2. update car
+3. delete car
+    """)
+    choose = input("-> : ")
+
+
+
+
 def login():
     login = input("greq dzer login")
     while True:
