@@ -6,6 +6,7 @@ def Car_name_creator(msg):
                 print('ogtagorceq miayn tar ev tiv')
                 msg = input('krkin porceq: - ')
                 stop = False
+            continue
         break
 
 def Car_date_creator(msg):
@@ -16,8 +17,9 @@ def Car_date_creator(msg):
                 return True
             else:
                 print('ogtagorceq miayn tiv')
-                msg = input('krkin porceq: - ')
                 stop = False
+        continue
+
 
 
 
