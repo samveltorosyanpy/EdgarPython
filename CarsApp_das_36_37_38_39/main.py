@@ -2,6 +2,8 @@ from db.User import UserClass
 from validators.register_vals import val_date, val_login, val_password, val_phone
 from config import ADMINS
 
+
+
 def admin_func():
     while True:
         print("""
@@ -31,16 +33,11 @@ def login():
             if password == UserClass().get_user_password_by_login(login):
                 if UserClass().get_user_by_login(login)['id'] in ADMINS:
                     admin_func()
-                else:
-                    print("user interface")
                 break
             else:
-                continue
+                print('user interface')
         else:
             login = input("ayd anunov user goyutyun chuni porceq krkin")
-
-
-
 
 def register():
     phone = input("greq heraxosahamary")

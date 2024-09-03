@@ -48,9 +48,7 @@ class UserClass:
         for kw in kwargs:
             if kw in list(user.keys()):
                 user[kw] = kwargs[kw]
-
         self.update()
-
 
 # user = UserClass()
 # print(user.get_user_password_by_login("AAAAAA"))

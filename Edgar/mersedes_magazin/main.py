@@ -1,6 +1,7 @@
 from cod_creator.registration import creator_login,creator_phone,creator_parol
 from Creator_user.user_creator import UserMost
-from cod_creator.Creator_Cars import Car_name_creator,Car_date_creator
+from cod_creator.Creator_Cars import Car_name_creator,Car_date_creator,Car_info_creator,Car_price_creator
+from creator_cars.cars_creator import Cars
 
 def grancum():
     print('voxchuyn sireli ogtater: \n')
@@ -50,8 +51,8 @@ def command():
             command = int(input('krkin porceq: - '))
 
 def cars_magazin():
-    print('1. nayel meqenaner')
-    print('2. avelacnel meqena')
+    print('1. avelacnel meqena')
+    print('2. nayel meqenaner')
     print('3. gnel meqena')
     print('4. Het gnal menu')
 
@@ -59,13 +60,19 @@ def command_cars():
     command = int(input('yntreq tarberaky: - '))
     while True:
         if command == 1:
-
             car_name = input('Car name: - ')
             Car_name_creator(msg=car_name)
 
             car_date = input('Car date: - ')
             Car_date_creator(msg=car_date)
 
+            car_info = input('Car info: - ')
+            Car_info_creator(msg=car_info)
+
+            car_price = input('Car price: - ')
+            Car_price_creator(msg=car_price)
+            Cars().Cars_add_creator(name=car_name,date=car_date,info=car_info,price=car_price)
+            break
 
 
 if __name__ == '__main__':
