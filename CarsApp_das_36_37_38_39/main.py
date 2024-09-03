@@ -37,7 +37,7 @@ def admin_func():
             continue
 
 def login():
-    login = input("greq dzer login")
+    login = input("greq dzer login: -> ")
     while True:
         if login in UserClass().get_user_logins():
             password = input("greq dzer parol@")
@@ -48,18 +48,19 @@ def login():
             else:
                 print('user interface')
         else:
-            login = input("ayd anunov user goyutyun chuni porceq krkin")
+            print("ayd anunov user goyutyun chuni porceq krkin")
+            login = input('Login: -> ')
 
 def register():
-    phone = input("greq heraxosahamary")
+    phone = input("greq heraxosahamary: -> ")
     val_phone(phone)
-    login = input("stexceq login")
+    login = input("stexceq login: -> ")
     val_login(login)
-    user_date = input("greq dzer cnndyan amis amsativ@ (YYYY-MM-DD): -  ")
+    user_date = input("greq dzer cnndyan amis amsativ@ (YYYY-MM-DD): ->  ")
 
     if val_date(msg=user_date):
-        password1 = input("stexceq parol")
-        password2 = input("krkneq nor paroly")
+        password1 = input("stexceq parol: -> ")
+        password2 = input("krkneq nor paroly: -> ")
 
         if val_password(password1, password2) is True:
             UserClass().create_now_user(login=login, password=password2, phone=phone, user_date=user_date)
@@ -73,7 +74,7 @@ def start():
 2) grancvel
     """)
     while True:
-        c = input("yntreq: ")
+        c = input("yntreq: -> ")
         if c == "1":
             login()
             break
