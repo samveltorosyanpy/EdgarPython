@@ -8,7 +8,6 @@ class UserClass:
             text = file.read()
             self.data = json.loads(text)
 
-
     def get_user_logins(self):
         logins = []
         for user in self.data['users']:

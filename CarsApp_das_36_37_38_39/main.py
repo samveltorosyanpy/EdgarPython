@@ -4,6 +4,7 @@ from config import ADMINS
 from db.Cars import Cars
 
 
+
 def admin_func():
     while True:
         print("""
@@ -46,10 +47,8 @@ def login():
                 break
             else:
                 print('user interface')
-
         else:
             login = input("ayd anunov user goyutyun chuni porceq krkin")
-
 
 def register():
     phone = input("greq heraxosahamary")
