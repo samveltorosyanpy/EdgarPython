@@ -1,6 +1,7 @@
 from db.User import UserClass
 from validators.register_vals import val_date, val_login, val_password, val_phone
 from config import ADMINS
+from db.Cars import Cars
 
 
 def admin_func():
@@ -12,8 +13,18 @@ def admin_func():
              """)
         choose = input('-> : ')
         if choose == '1':
-            print('add car')
-            break
+            print('Greq dzer naxntrac meqenayi anvanumy')
+
+            poisk = input('poisk cars name: -> ')
+            while True:
+                car_data = Cars().get_cars_by_name(name=poisk)
+                if car_data:
+                    print(car_data)
+                    break
+                else:
+                    print('nman anunov meqena goyutyun chuni porceq mek urish')
+                    poisk = input('krkin porcel: -> ')
+
         elif choose == '2':
             print('update car')
             break
@@ -77,14 +88,3 @@ def start():
 
 if __name__ == "__main__":
     start()
-
-
-
-# x[0] = 6
-#
-# print(id(x))
-
-
-
-
-# 4377553200
