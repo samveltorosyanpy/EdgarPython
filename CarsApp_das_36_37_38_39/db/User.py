@@ -26,6 +26,12 @@ class UserClass:
                 return user
         return False
 
+    def get_user_by_login(self, user_login):
+        for user in self.data['users']:
+            if user['login'] == user_login:
+                return user
+        return False
+
     def get_user_password_by_login(self, login):
         for user in self.data['users']:
             if user['login'] == login:
