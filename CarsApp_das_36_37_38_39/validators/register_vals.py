@@ -111,6 +111,8 @@ def val_phone(msg):
         else:
             stop = True
 
+val_phone(msg='05518162e')
+
 
 
 
